@@ -4,7 +4,20 @@
 Game.spawns['Spawn1'].spawnCreep( [WORK, CARRY, MOVE], 'Harvester1' );
 Game.spawns['Spawn1'].spawnCreep( [WORK, CARRY, MOVE], 'Harvester2' );
 
+
+
+
 /***** UPGRADE *****/
 
+Game.spawns['Spawn1'].spawnCreep( [WORK, CARRY, MOVE], 'Upgrader1' );
+Game.creeps['Harvester1'].memory.role = 'harvester';
+Game.creeps['Upgrader1'].memory.role = 'upgrader';
+
+
+
+/***** BUILD *****/
+
+Game.spawns['Spawn1'].spawnCreep( [WORK, CARRY, MOVE], 'Builder1',
+    { memory: { role: 'builder' } } );
 
 
